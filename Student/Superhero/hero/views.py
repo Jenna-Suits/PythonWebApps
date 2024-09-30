@@ -6,7 +6,7 @@ class HulkView(TemplateView):
         return {
             'title': 'Hulk',
             'id': 'Bruce Banner',
-            'image': 'Student\Superhero\static\images\hulk.jpg'
+            'image': '/static/images/hulk.jpg'
         }
 
 class IronManView(TemplateView):
@@ -15,5 +15,5 @@ class IronManView(TemplateView):
         return {
             'title': 'IronMan',
             'id': 'Tony Stark',
-            'image': 'Superhero/static/images/iron_man.jpg'
+            'image': '/static/images/iron_man.jpg'
         }
