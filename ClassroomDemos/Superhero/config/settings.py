@@ -25,7 +25,11 @@ SECRET_KEY = 'django-insecure--bbs68lvsrx1n2n^s!)0wb7(yd4tkio&u4do46r&v741=-lunk
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    "127.0.0.1",
+    "localhost",
+    ".ondigitalocean.app",
+]
 
 
 # Application definition
@@ -37,10 +41,14 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
     # Third-party
     'crispy_forms',
+
     # My apps
+    'blog',
     'hero',
+    'photos',
 ]
 
 MIDDLEWARE = [
@@ -53,7 +61,11 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'hero.urls'
+ROOT_URLCONF = 'config.urls'
+
+LOGIN_REDIRECT_URL = '/'
+
+LOGOUT_REDIRECT_URL = '/'
 
 TEMPLATES = [
     {
@@ -121,6 +133,10 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 STATICFILES_DIRS = [BASE_DIR / "static"]
+
+# Upload location for images
+MEDIA_URL = 'media/'
+MEDIA_ROOT = BASE_DIR / "media"
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field

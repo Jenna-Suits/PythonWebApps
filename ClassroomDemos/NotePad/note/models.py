@@ -29,3 +29,8 @@ n.delete()
 
 # Delete multiple objects
 n = Note.objects.filter(author="Me").delete()
+
+def list_notes():
+    for n in Note.objects.all():
+        print(n.pk, n.title, n.author)
+
