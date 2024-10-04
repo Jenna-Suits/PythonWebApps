@@ -17,3 +17,7 @@ class IronManView(TemplateView):
             'id': 'Tony Stark',
             'image': '/static/images/iron_man.jpg'
         }
+def get_context_data(self, **kwargs):
+    p = kwargs['name']
+    p = f'/static/images/{p}'
+    return dict(photo=p)

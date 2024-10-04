@@ -20,3 +20,5 @@ def main():
 
 if __name__ == '__main__':
     main()
+<h1>Photo</h1>
+<p><img src="{{ photo }}" alt="{{ photo }}"></p>
